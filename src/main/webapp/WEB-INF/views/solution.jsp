@@ -4,18 +4,18 @@
 
 <html>
 <head>
-    <title>Solution quadratic equation_1</title>
+    <title>Solution quadratic equation_2</title>
 </head>
 <body>
 <div>
     <h2>Введите коэффициэнты квадратного уравнения a, b и c:</h2>
     <form:form action="/" method="post">
         <td>A</td>
-        <input type="number" name="a" />
+        <input type="text" name="a" />
         <td>B</td>
-        <input type="number" name="b" />
+        <input type="text" name="b" />
         <td>C</td>
-        <input type="number" name="c" />
+        <input type="text" name="c" />
         <td colspan="2"><input type="submit" value="Расчитать"></td>
     </form:form>
 </div>
