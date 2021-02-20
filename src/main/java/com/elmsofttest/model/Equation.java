@@ -1,10 +1,11 @@
 package com.elmsofttest.model;
 
+import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
+import javax.persistence.Column;
 import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
 
 
 /**
@@ -22,26 +23,32 @@ public class Equation {
     /**
      * Coefficient A.
      */
+    @Column(name = "coefficienta")
     private Double coefficientA;
     /**
      * Coefficient B.
      */
+    @Column(name = "coefficientb")
     private Double coefficientB;
     /**
      * Coefficient C.
      */
+    @Column(name = "coefficientc")
     private Double coefficientC;
     /**
      * Discriminamt.
      */
+    @Column(name = "discriminant")
     private Double discriminant;
     /**
      * First root quadratic equation.
      */
+    @Column(name = "rootfirst")
     private Double rootFirst;
     /**
      * Second root quadratic equation.
      */
+    @Column(name = "rootsecond")
     private Double rootSecond;
 
     /**

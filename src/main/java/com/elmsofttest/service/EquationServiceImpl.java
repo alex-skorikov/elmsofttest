@@ -44,13 +44,12 @@ public class EquationServiceImpl implements EquationService {
         double rootSecond;
         equation.setDiscriminant(discriminant);
         if (discriminant == 0) {
-            rootFirst = (-1 * equation.getCoefficientB() + Math.sqrt(discriminant))
+            rootFirst = (-1 * equation.getCoefficientB())
                     / (2 * equation.getCoefficientA());
-            rootSecond = (-1 * equation.getCoefficientB() - Math.sqrt(discriminant))
-                    / (2 * equation.getCoefficientA());
+            rootSecond = rootFirst;
         } else {
-            rootFirst = ((-1 * equation.getCoefficientB()) / 2) * equation.getCoefficientA();
-            rootSecond = ((-1 * equation.getCoefficientB()) / 2) * equation.getCoefficientA();
+            rootFirst = (-1 * equation.getCoefficientB() + Math.sqrt(discriminant)) / (2 * equation.getCoefficientA());
+            rootSecond = (-1 * equation.getCoefficientB() - Math.sqrt(discriminant)) / (2 * equation.getCoefficientA());
         }
         equation.setRootFirst(rootFirst);
         equation.setRootSecond(rootSecond);

@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-    <h2>Уравнение не имеет решения.</h2>
+    <h2>Уравнение не имеет действительных корней.</h2>
     <form:form action="/" method="get">
         <button>Назад</button>
     </form:form>

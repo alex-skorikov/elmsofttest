@@ -4,18 +4,24 @@
 
 <html>
 <head>
-    <title>Solution quadratic equation_1</title>
+    <title>Solution quadratic equation</title>
 </head>
 <body>
 <div>
-    <h2>Введите коэффициэнты квадратного уравнения a, b и c:</h2>
+    <h2>Введите коэффициенты квадратного уравнения a, b и c:</h2>
     <form:form action="/" method="post">
         <td>A</td>
-        <input type="number" name="a" />
+        <label>
+            <input type="number" step="any" name="a" value="0.0"/>
+        </label>
         <td>B</td>
-        <input type="number" name="b" />
+        <label>
+            <input type="number" step="any" name="b" value="0.0"/>
+        </label>
         <td>C</td>
-        <input type="number" name="c" />
+        <label>
+            <input type="number" step="any" name="c" value="0.0"/>
+        </label>
         <td colspan="2"><input type="submit" value="Расчитать"></td>
     </form:form>
 </div>
