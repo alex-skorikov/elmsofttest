@@ -3,10 +3,14 @@ sudo: false
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-
+  - t '28398882-a867-4b64-ab05-4bff886e1165'
 notifications:
   email:
     recipients:
       - the.na4ig@gmail.com
-    on_success: never # default: change
-    on_failure: always # default: always
+    on_success: never
+    on_failure: always
+
+
+
+
