@@ -1,3 +1,6 @@
+[![codecov](https://codecov.io/gh/alex-skorikov/elmsofttest/branch/master/graph/badge.svg)](https://codecov.io/gh/alex-skorikov/elmsofttest)
+[![Build Status](https://travis-ci.org/alex-skorikov/elmsofttest.svg?branch=master)](https://travis-ci.org/alex-skorikov/elmsofttest)
+
 **Задача**
 Реализовать веб приложение для вычисления корней квадратного уравнения вида ax^2 + bx + c = 0
 

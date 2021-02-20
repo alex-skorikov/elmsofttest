@@ -9,8 +9,15 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+/**
+ * Web app initializer.
+ */
 public class Initializer implements WebApplicationInitializer {
-
+    /**
+     * Initialize application on start.
+     * @param servletContext context.
+     * @throws ServletException exception.
+     */
     public void onStartup(ServletContext servletContext)
             throws ServletException {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();

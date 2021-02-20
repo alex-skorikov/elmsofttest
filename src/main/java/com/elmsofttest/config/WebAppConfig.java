@@ -17,25 +17,53 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
+/**
+ * Web app configuration.
+ */
 @Configuration
 @ComponentScan("com.elmsofttest")
 @EnableWebMvc
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
 public class WebAppConfig {
-
+    /**
+     * DB driver.
+     */
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "db.driver";
-    private static final String PROPERTY_NAME_DATABASE_URL = "db.url";
-    private static final String PROPERTY_NAME_DATABASE_PASSWORD = "db.password";
+    /**
+     * DB username.
+     */
     private static final String PROPERTY_NAME_DATABASE_USERNAME = "db.username";
-
+    /**
+     * DB url.
+     */
+    private static final String PROPERTY_NAME_DATABASE_URL = "db.url";
+    /**
+     * Db password.
+     */
+    private static final String PROPERTY_NAME_DATABASE_PASSWORD = "db.password";
+    /**
+     * Hibernate dialect.
+     */
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "hibernate.dialect";
+    /**
+     * Property show sql.
+     */
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "hibernate.show_sql";
+    /**
+     * Packages scan.
+     */
     private static final String PROPERTY_NAME_ENTITYMANAGER_PACKAGES_TO_SCAN = "entitymanager.packages.to.scan";
-
+    /**
+     * Enviroment.
+     */
     @Resource
     private Environment env;
 
+    /**
+     * Data source.
+     * @return data source.
+     */
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -48,6 +76,10 @@ public class WebAppConfig {
         return dataSource;
     }
 
+    /**
+     * Session factory.
+     * @return session factory bean.
+     */
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
@@ -57,6 +89,10 @@ public class WebAppConfig {
         return sessionFactoryBean;
     }
 
+    /**
+     * Hibernate properties from application properties..
+     * @return properties.
+     */
     private Properties hibProperties() {
         Properties properties = new Properties();
         properties.put(PROPERTY_NAME_HIBERNATE_DIALECT, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_DIALECT));
@@ -64,6 +100,10 @@ public class WebAppConfig {
         return properties;
     }
 
+    /**
+     * Transactional manager.
+     * @return manager.
+     */
     @Bean
     public HibernateTransactionManager transactionManager() {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
@@ -71,6 +111,10 @@ public class WebAppConfig {
         return transactionManager;
     }
 
+    /**
+     * Url resolver.
+     * @return resolver.
+     */
     @Bean
     public UrlBasedViewResolver setupViewResolver() {
         UrlBasedViewResolver resolver = new UrlBasedViewResolver();

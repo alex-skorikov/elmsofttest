@@ -8,16 +8,21 @@
 </head>
 <body>
 <div>
-    <h2>Введите коэффициэнты квадратного уравнения a, b и c:</h2>
-    <form:form action="/" method="post">
-        <td>A</td>
-        <input type="text" name="a" />
-        <td>B</td>
-        <input type="text" name="b" />
-        <td>C</td>
-        <input type="text" name="c" />
-        <td colspan="2"><input type="submit" value="Расчитать"></td>
-    </form:form>
+    <h2>Расчет квадратного уравнения a, b и c:</h2>
+    <table>
+        <tr>
+            <td>-A-</td>
+            <td>${a}</td>
+        </tr>
+        <tr>
+            <td>-B-</td>
+            <td>${b}</td>
+        </tr>
+        <tr>
+            <td>-C-</td>
+            <td>${c}</td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>

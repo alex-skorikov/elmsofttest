@@ -2,6 +2,13 @@ package com.elmsofttest.service;
 
 import com.elmsofttest.model.Equation;
 
+/**
+ * Equation service.
+ */
 public interface EquationService {
-    public void addEquation(Equation equation);
+    /**
+     * Add equation, for save to DB..
+     * @param equation equation.
+     */
+    void addEquation(Equation equation);
 }
