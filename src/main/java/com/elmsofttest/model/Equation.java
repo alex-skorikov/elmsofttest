@@ -22,19 +22,19 @@ public class Equation {
     /**
      * Coefficient A.
      */
-    private Integer coefficientA;
+    private Double coefficientA;
     /**
      * Coefficient B.
      */
-    private Integer coefficientB;
+    private Double coefficientB;
     /**
      * Coefficient C.
      */
-    private Integer coefficientC;
+    private Double coefficientC;
     /**
      * Discriminamt.
      */
-    private Integer discriminant;
+    private Double discriminant;
     /**
      * First root quadratic equation.
      */
@@ -55,16 +55,16 @@ public class Equation {
      *
      * @return coefficient a.
      */
-    public Integer getCoefficientA() {
+    public Double getCoefficientA() {
         return coefficientA;
     }
 
     /**
      * Set coefficient a.
      *
-     * @param coefficientA coeffiticient a.
+     * @param coefficientA coefficicient a.
      */
-    public void setCoefficientA(Integer coefficientA) {
+    public void setCoefficientA(Double coefficientA) {
         this.coefficientA = coefficientA;
     }
 
@@ -73,7 +73,7 @@ public class Equation {
      *
      * @return coefficient b.
      */
-    public Integer getCoefficientB() {
+    public Double getCoefficientB() {
         return coefficientB;
     }
 
@@ -82,7 +82,7 @@ public class Equation {
      *
      * @param coefficientB coefficient b.
      */
-    public void setCoefficientB(Integer coefficientB) {
+    public void setCoefficientB(Double coefficientB) {
         this.coefficientB = coefficientB;
     }
 
@@ -91,7 +91,7 @@ public class Equation {
      *
      * @return coefficient c.
      */
-    public Integer getCoefficientC() {
+    public Double getCoefficientC() {
         return coefficientC;
     }
 
@@ -100,7 +100,7 @@ public class Equation {
      *
      * @param coefficientC coefficient c.
      */
-    public void setCoefficientC(Integer coefficientC) {
+    public void setCoefficientC(Double coefficientC) {
         this.coefficientC = coefficientC;
     }
 
@@ -109,7 +109,7 @@ public class Equation {
      *
      * @return discriminant.
      */
-    public Integer getDiscriminant() {
+    public Double getDiscriminant() {
         return discriminant;
     }
 
@@ -118,7 +118,7 @@ public class Equation {
      *
      * @param discriminant discriminant.
      */
-    public void setDiscriminant(Integer discriminant) {
+    public void setDiscriminant(Double discriminant) {
         this.discriminant = discriminant;
     }
 

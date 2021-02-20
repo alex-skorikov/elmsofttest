@@ -11,4 +11,18 @@ public interface EquationService {
      * @param equation equation.
      */
     void addEquation(Equation equation);
+
+    /**
+     * Validate Equation coefficients.
+     * @param equation equation.
+     * @return is valid.
+     */
+    boolean validateCoefficients(Equation equation);
+
+    /**
+     * Solution.
+     * @param equation equation.
+     * @return equation.
+     */
+    Equation solutionEquation(Equation equation);
 }
