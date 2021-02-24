@@ -182,4 +182,35 @@ public class Equation {
     public Long getId() {
         return id;
     }
+
+    public boolean isValid(Equation equation) {
+        boolean isValid = false;
+        if (equation.getCoefficientA() != 0 && calculateDiscriminant(equation) >= 0) {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    public Equation solutionEquation(Equation equation) {
+        double discriminant = calculateDiscriminant(equation);
+        double rootFirst;
+        double rootSecond;
+        equation.setDiscriminant(discriminant);
+        if (discriminant == 0) {
+            rootFirst = (-1 * equation.getCoefficientB())
+                    / (2 * equation.getCoefficientA());
+            rootSecond = rootFirst;
+        } else {
+            rootFirst = (-1 * equation.getCoefficientB() + Math.sqrt(discriminant)) / (2 * equation.getCoefficientA());
+            rootSecond = (-1 * equation.getCoefficientB() - Math.sqrt(discriminant)) / (2 * equation.getCoefficientA());
+        }
+        equation.setRootFirst(rootFirst);
+        equation.setRootSecond(rootSecond);
+        return equation;
+    }
+
+    private double calculateDiscriminant(Equation equation) {
+        return equation.getCoefficientB() * equation.getCoefficientB()
+                - 4 * equation.getCoefficientA() * equation.getCoefficientC();
+    }
 }
