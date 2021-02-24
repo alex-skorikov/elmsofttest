@@ -30,12 +30,12 @@ public class EquationServiceImpl implements EquationService {
 
     @Override
     public boolean validateCoefficients(Equation equation) {
-        return equation.isValid(equation);
+        return equation.isValid();
     }
 
     @Override
     public Equation solutionEquation(Equation equation) {
-        return equation.solutionEquation(equation);
+        return equation.solutionEquation();
     }
 
 }

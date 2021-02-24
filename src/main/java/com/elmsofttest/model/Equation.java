@@ -183,34 +183,34 @@ public class Equation {
         return id;
     }
 
-    public boolean isValid(Equation equation) {
+    public boolean isValid() {
         boolean isValid = false;
-        if (equation.getCoefficientA() != 0 && calculateDiscriminant(equation) >= 0) {
+        if (this.getCoefficientA() != 0 && calculateDiscriminant() >= 0) {
             isValid = true;
         }
         return isValid;
     }
 
-    public Equation solutionEquation(Equation equation) {
-        double discriminant = calculateDiscriminant(equation);
+    public Equation solutionEquation() {
+        double discriminant = calculateDiscriminant();
         double rootFirst;
         double rootSecond;
-        equation.setDiscriminant(discriminant);
+        this.setDiscriminant(discriminant);
         if (discriminant == 0) {
-            rootFirst = (-1 * equation.getCoefficientB())
-                    / (2 * equation.getCoefficientA());
+            rootFirst = (-1 * this.getCoefficientB())
+                    / (2 * this.getCoefficientA());
             rootSecond = rootFirst;
         } else {
-            rootFirst = (-1 * equation.getCoefficientB() + Math.sqrt(discriminant)) / (2 * equation.getCoefficientA());
-            rootSecond = (-1 * equation.getCoefficientB() - Math.sqrt(discriminant)) / (2 * equation.getCoefficientA());
+            rootFirst = (-1 * this.getCoefficientB() + Math.sqrt(discriminant)) / (2 * this.getCoefficientA());
+            rootSecond = (-1 * this.getCoefficientB() - Math.sqrt(discriminant)) / (2 * this.getCoefficientA());
         }
-        equation.setRootFirst(rootFirst);
-        equation.setRootSecond(rootSecond);
-        return equation;
+        this.setRootFirst(rootFirst);
+        this.setRootSecond(rootSecond);
+        return this;
     }
 
-    private double calculateDiscriminant(Equation equation) {
-        return equation.getCoefficientB() * equation.getCoefficientB()
-                - 4 * equation.getCoefficientA() * equation.getCoefficientC();
+    private double calculateDiscriminant() {
+        return this.getCoefficientB() * this.getCoefficientB()
+                - 4 * this.getCoefficientA() * this.getCoefficientC();
     }
 }
