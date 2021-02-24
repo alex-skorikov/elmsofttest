@@ -168,7 +168,7 @@ public class Equation {
     /**
      * Set eqution id.
      *
-     * @param id ID.
+     * @param id id.
      */
     public void setId(Long id) {
         this.id = id;
@@ -177,12 +177,16 @@ public class Equation {
     /**
      * Get equation id.
      *
-     * @return ID.
+     * @return id.
      */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Is coefficients valid.
+     * @return is valid.
+     */
     public boolean isValid() {
         boolean isValid = false;
         if (this.getCoefficientA() != 0 && calculateDiscriminant() >= 0) {
@@ -191,6 +195,10 @@ public class Equation {
         return isValid;
     }
 
+    /**
+     * Solution euation.
+     * @return equation solution.
+     */
     public Equation solutionEquation() {
         double discriminant = calculateDiscriminant();
         double rootFirst;
@@ -209,6 +217,10 @@ public class Equation {
         return this;
     }
 
+    /**
+     * Calculate discriminant.
+     * @return discriminant.
+     */
     private double calculateDiscriminant() {
         return this.getCoefficientB() * this.getCoefficientB()
                 - 4 * this.getCoefficientA() * this.getCoefficientC();
